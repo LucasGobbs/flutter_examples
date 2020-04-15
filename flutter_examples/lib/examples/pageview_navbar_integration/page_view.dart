@@ -10,17 +10,7 @@ class PageViewWidget extends StatelessWidget {
       return Observer(builder: (_) {
         return PageView(
           controller: myModel.pageController,
-          children: <Widget>[
-            Container(color: Colors.blue,
-              child: Center(child: Text("First Page")),
-            ),
-            Container(color: Colors.blue,
-              child: Center(child: Text("Second Page")),
-            ),
-            Container(color: Colors.blue,
-              child: Center(child: Text("Third Page")),
-            ),
-          ],
+          children: page_list,
           
           onPageChanged: (index) {
             
@@ -32,3 +22,16 @@ class PageViewWidget extends StatelessWidget {
     
   }
 }
+ List<Widget> page_list = [
+  Container(
+    color:  Colors.blue,
+    child: Center(child: Text("First Page")),
+  ),
+  Container(
+    color: Colors.blue,
+    child: Center(child: Text("Second Page")),
+  ),
+  Container(color: Colors.blue,
+    child: Center(child: Text("Third Page")),
+  ),
+];

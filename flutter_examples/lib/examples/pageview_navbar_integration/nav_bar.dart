@@ -4,7 +4,6 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 
 class NavBarWidget extends StatelessWidget {
-  int selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     return Consumer<MainController>(builder: (context, myModel, child) {
@@ -23,8 +22,6 @@ class NavBarWidget extends StatelessWidget {
           currentIndex: myModel.currentSelectedTab,
           onTap: (index) {
             myModel.changeSelectedTab(index);
-          
-            
           },
         );
       });

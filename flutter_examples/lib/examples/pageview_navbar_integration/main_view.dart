@@ -6,8 +6,9 @@ import 'package:flutter_examples/examples/pageview_navbar_integration/page_view.
 import 'package:flutter_examples/router.gr.dart';
 import 'package:provider/provider.dart';
 
+
+
 class PageViewNavBarIntegration extends StatefulWidget {
-  MainController controller = MainController();
   @override
   _PageViewNavBarIntegrationState createState() => _PageViewNavBarIntegrationState();
   static Widget card(){
@@ -15,7 +16,11 @@ class PageViewNavBarIntegration extends StatefulWidget {
       icon: Icons.code,
       title: Text("PageView and NavBar integration"),
       subtitle: Text("Using mobX and provider"),
-      codeButtonCallback: (){},
+      codeButtonCallback:() {
+       Router.navigator.pushNamed(
+          Router.pageviewshowCode, 
+        );
+      },
       exampleButtonCallback: (){
         Router.navigator.pushNamed(
           Router.pageViewNavBarIntegration, 
